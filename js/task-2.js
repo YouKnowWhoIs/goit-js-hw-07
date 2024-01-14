@@ -48,6 +48,8 @@ liListItems.forEach((liListItemss) => {
   liListItemss.style.listStyleType = `none`;
   liListItemss.style.display = `flex`;
   liListItemss.style.flexWrap = `wrap`;
+  liListItemss.style.flexDirection = `row`;
   liListItemss.style.columnGap = `24px`;
   liListItemss.style.rowGap = `48px`;
+  liListItemss.style.padding = `100px 156px`;
 });
