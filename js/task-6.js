@@ -6,7 +6,7 @@ function getRandomHexColor() {
 
 const create = document.querySelector("button[data-create]");
 const destroy = document.querySelector("button[data-destroy]");
-const inputElement = document.querySelector("#controls input");
+const inputElement = document.querySelector("input");
 const boxConteiner = document.querySelector("#boxes");
 
 create.addEventListener("click", createBoxes);
@@ -42,3 +42,54 @@ function destroyBoxes() {
 function isValidInput(value) {
   return Number.isInteger(value) && value > 0 && value < 101;
 }
+
+//style
+
+inputElement.style.border = ` 1px solid #808080`;
+inputElement.style.borderRadius = `8px`;
+inputElement.style.padding = `8px`;
+inputElement.style.width = `150px`;
+inputElement.style.textAlign = `center`;
+
+create.style.letterSpacing = `0.64px`;
+create.style.background = `#4e75ff`;
+create.style.color = `#fff`;
+create.style.fontWeight = `500`;
+create.style.padding = `8px 16px`;
+create.style.border = `none`;
+create.style.borderRadius = `8px`;
+create.addEventListener("mouseenter", () => {
+  create.style.backgroundColor = "#6C8CFF";
+});
+create.addEventListener("mouseleave", () => {
+  create.style.backgroundColor = "#4e75ff";
+});
+
+destroy.style.letterSpacing = `0.64px`;
+destroy.style.background = `#ff4e4e`;
+destroy.style.color = `#fff`;
+destroy.style.fontWeight = `500`;
+destroy.style.padding = `8px 16px`;
+destroy.style.border = `none`;
+destroy.style.borderRadius = `8px`;
+destroy.addEventListener("mouseenter", () => {
+  destroy.style.backgroundColor = "#FF7070";
+});
+destroy.addEventListener("mouseleave", () => {
+  destroy.style.backgroundColor = "#ff4e4e";
+});
+
+const item = document.querySelector("#controls");
+item.style.backgroundColor = `#F6F6FE`;
+item.style.padding = `32px 0px 32px 32px`;
+item.style.display = `flex`;
+item.style.width = `410px`;
+item.style.flexDirection = `row`;
+item.style.gap = `16px`;
+item.style.marginBottom = `16px`;
+
+boxConteiner.style.backgroundColor = `#F6F6FE`;
+boxConteiner.style.padding = `32px`;
+boxConteiner.style.display = `flex`;
+boxConteiner.style.flexDirection = `column`;
+boxConteiner.style.gap = `16px`;

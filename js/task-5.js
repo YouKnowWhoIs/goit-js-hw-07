@@ -12,3 +12,13 @@ button.addEventListener("click", () => {
   button.style.backgroundColor = randomColor;
   nameColor.textContent = randomColor;
 });
+
+//style
+
+button.style.letterSpacing = `0.64px`;
+button.style.background = `#4e75ff`;
+button.style.color = `#fff`;
+button.style.fontWeight = `500`;
+button.style.padding = `8px 16px`;
+button.style.border = `none`;
+button.style.borderRadius = `8px`;

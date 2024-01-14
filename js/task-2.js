@@ -40,3 +40,14 @@ const marcup = images
   .join("");
 
 listItems.insertAdjacentHTML("beforeend", marcup);
+
+// style
+
+const liListItems = document.querySelectorAll("li");
+liListItems.forEach((liListItemss) => {
+  liListItemss.style.listStyleType = `none`;
+  liListItemss.style.display = `flex`;
+  liListItemss.style.flexWrap = `wrap`;
+  liListItemss.style.columnGap = `24px`;
+  liListItemss.style.rowGap = `48px`;
+});
