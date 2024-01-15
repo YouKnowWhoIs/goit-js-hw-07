@@ -4,21 +4,11 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const nameColor = document.querySelector(".color");
+const colorSpan = document.querySelector(".color");
 const button = document.querySelector(".change-color");
 
 button.addEventListener("click", () => {
   const randomColor = getRandomHexColor();
-  button.style.backgroundColor = randomColor;
-  nameColor.textContent = randomColor;
+  document.body.style.backgroundColor = randomColor;
+  colorSpan.textContent = randomColor;
 });
-
-//style
-
-button.style.letterSpacing = `0.64px`;
-button.style.background = `#4e75ff`;
-button.style.color = `#fff`;
-button.style.fontWeight = `500`;
-button.style.padding = `8px 16px`;
-button.style.border = `none`;
-button.style.borderRadius = `8px`;

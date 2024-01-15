@@ -7,12 +7,13 @@ function getRandomHexColor() {
 const create = document.querySelector("button[data-create]");
 const destroy = document.querySelector("button[data-destroy]");
 const inputElement = document.querySelector("input");
-const boxConteiner = document.querySelector("#boxes");
+const boxContainer = document.querySelector("#boxes");
 
 create.addEventListener("click", createBoxes);
 destroy.addEventListener("click", destroyBoxes);
 
 function createBoxes() {
+  destroyBoxes();
   const amount = parseInt(inputElement.value);
 
   if (isValidInput(amount)) {
@@ -28,7 +29,7 @@ function createBoxes() {
       boxSize += 10;
     }
 
-    boxConteiner.append(...boxes);
+    boxContainer.append(...boxes);
     inputElement.value = "";
   } else {
     console.log("Chose a number!");
@@ -36,7 +37,7 @@ function createBoxes() {
 }
 
 function destroyBoxes() {
-  boxConteiner.innerHTML = "";
+  boxContainer.innerHTML = "";
 }
 
 function isValidInput(value) {
@@ -88,8 +89,8 @@ item.style.flexDirection = `row`;
 item.style.gap = `16px`;
 item.style.marginBottom = `16px`;
 
-boxConteiner.style.backgroundColor = `#F6F6FE`;
-boxConteiner.style.padding = `32px`;
-boxConteiner.style.display = `flex`;
-boxConteiner.style.flexDirection = `column`;
-boxConteiner.style.gap = `16px`;
+boxContainer.style.backgroundColor = `#F6F6FE`;
+boxContainer.style.padding = `32px`;
+boxContainer.style.display = `flex`;
+boxContainer.style.flexDirection = `column`;
+boxContainer.style.gap = `16px`;

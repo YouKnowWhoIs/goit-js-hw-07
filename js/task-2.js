@@ -27,29 +27,9 @@ const images = [
 
 const list = document.querySelector(".gallery");
 
-const listItems = document.createElement("li");
-listItems.classList.add("list-items");
-
-list.append(listItems);
-
-const marcup = images
-  .map(
-    (image) =>
-      `<img alt="${image.alt}" src="${image.url}" width="360" height="300"></img>`
-  )
-  .join("");
-
-listItems.insertAdjacentHTML("beforeend", marcup);
-
-// style
-
-const liListItems = document.querySelectorAll("li");
-liListItems.forEach((liListItemss) => {
-  liListItemss.style.listStyleType = `none`;
-  liListItemss.style.display = `flex`;
-  liListItemss.style.flexWrap = `wrap`;
-  liListItemss.style.flexDirection = `row`;
-  liListItemss.style.columnGap = `24px`;
-  liListItemss.style.rowGap = `48px`;
-  liListItemss.style.padding = `100px 156px`;
+images.forEach((image) => {
+  list.insertAdjacentHTML(
+    "beforeend",
+    `<li class="list-items"><img alt="${image.alt}" src="${image.url}" width="360" height="300"></li>`
+  );
 });

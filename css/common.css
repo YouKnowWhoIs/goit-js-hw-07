@@ -16,3 +16,30 @@ body {
 .items {
   background-color: #f6f6fe;
 }
+
+.list-items {
+  list-style-type: none;
+  width: calc((100% - 48px) / 3);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 24px;
+  row-gap: 48px;
+  padding: 100px 150px;
+}
+
+.change-color {
+  letter-spacing: 0.64px;
+  background: #4e75ff;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+}
+.change-color:hover {
+  background: #6c8cff;
+}
