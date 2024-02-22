@@ -14,7 +14,7 @@ destroy.addEventListener("click", destroyBoxes);
 
 function createBoxes() {
   destroyBoxes();
-  const amount = parseInt(inputElement.value);
+  const amount = parseInt(inputElement.value, 10);
 
   if (isValidInput(amount)) {
     const boxes = [];
